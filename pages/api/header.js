@@ -14,12 +14,12 @@ export default function handler(req, res) {
                     },
                     "navsubmenu":[
                         {
-                            "SubMenuItems":{
-                                "Image":{
+                            "submenuitems":{
+                                "image":{
                                     "url":"/images/about-us-menu-icon.svg",
                                     "alt":"about-us"
                                 },
-                                "Link":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"About Manthantech"
@@ -27,12 +27,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/business-model-menu-icon.svg",
-                                    "alt":"business-model"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Business Model"
@@ -40,12 +36,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/working-method-menu-icon.svg",
-                                    "alt":"working-method"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Working Method"
@@ -53,12 +45,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/why-choose-us-menu-icon.svg",
-                                    "alt":"why-choose-us"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Why Choose Us"
@@ -66,12 +54,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/testimonials-menu-icon.svg",
-                                    "alt":"testimonials"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Testimonials"
@@ -79,32 +63,15 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/career-menu-icon.svg",
-                                    "alt":"career"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Careers"
                                 }
                             }
                         }
-                    ],
-                    "navblogs":{
-                        "title":"Every brand has a destination, we take you there!",
-                        "image":{
-                            "url":"/images/company-menu.svg",
-                            "alt":"company-menu",
-                        },
-                        "discription":"Working on a big project?",
-                        "button":{
-                            "title": "Contact Us",
-                            "url": "#",
-                            "target": ""
-                        }
-                    }
+                    ]
                 },
                 {
                     "navmenuitem":{
@@ -114,12 +81,8 @@ export default function handler(req, res) {
                     },
                     "navsubmenu":[
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/custom-web-development-menu-icon.svg",
-                                    "alt":"custom-web-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Custom Web Development"
@@ -127,12 +90,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/web-development-menu-icon.svg",
-                                    "alt":"web-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Web Development"
@@ -140,12 +99,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                "url":"/images/ecommerce-development-menu-icon.svg",
-                                    "alt":"ecommerce-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"eCommerce Development"
@@ -153,12 +108,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/mobile-app-development-menu-icon.svg",
-                                    "alt":"mobile-app-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Mobile App Development"
@@ -166,12 +117,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/web-design-menu-icon.svg",
-                                    "alt":"web-design"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Web Design"
@@ -179,12 +126,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/ui-ux-design-menu-icon.svg",
-                                    "alt":"ui-ux-design"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"UI/UX Design"
@@ -192,12 +135,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/design-to-website-menu-icon.svg",
-                                    "alt":"design-to-website"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Design to Website"
@@ -205,32 +144,15 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/logo-design-menu-icon.svg",
-                                    "alt":"logo-design"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Logo Design"
                                 }
                             }
                         }
-                    ],
-                    "navblogs":{
-                        "title":"Boost your projects with expert developers for seamless innovation.",
-                        "image":{
-                            "url":"/images/services-menu.svg",
-                            "alt":"services-menu",
-                        },
-                        "discription":"Finding a tech partner?",
-                        "button":{
-                            "title": "Get a Qoute",
-                            "url": "#",
-                            "target": ""
-                        }
-                    }
+                    ]
                 },
                 {
                     "navmenuitem":{
@@ -240,12 +162,8 @@ export default function handler(req, res) {
                     },
                     "navsubmenu":[
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/html-development-menu-icon.svg",
-                                    "alt":"html-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"HTML Development"
@@ -253,12 +171,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/css-development-menu-icon.svg",
-                                    "alt":"css-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"CSS Development"
@@ -266,12 +180,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/javascript-development-menu-icon.svg",
-                                    "alt":"javascript-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"JavaScript Development"
@@ -279,12 +189,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/reactjs-development-menu-icon.svg",
-                                    "alt":"reactjs-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"React Development"
@@ -292,12 +198,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/wordpress-development-menu-icon.svg",
-                                    "alt":"wordpress-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"WordPress Development"
@@ -305,12 +207,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/joomla-development-menu-icon.svg",
-                                    "alt":"joomla-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Joomla Development"
@@ -318,12 +216,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/hubspot-development-menu-icon.svg",
-                                    "alt":"hubspot-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"HubSpot Development"
@@ -331,12 +225,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/android-app-development-menu-icon.svg",
-                                    "alt":"android-app-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Android Development"
@@ -344,12 +234,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/ios-app-development-menu-icon.svg",
-                                    "alt":"ios-app-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"iOS Development"
@@ -357,12 +243,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/react-native-development-menu-icon.svg",
-                                    "alt":"react-native-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"React Native Development"
@@ -370,12 +252,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/flutter-development-menu-icon.svg",
-                                    "alt":"flutter-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Flutter Development"
@@ -383,12 +261,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/php-development-menu-icon.svg",
-                                    "alt":"php-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"PHP Development"
@@ -396,12 +270,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/laravel-development-menu-icon.svg",
-                                    "alt":"laravel-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Laravel Development"
@@ -409,12 +279,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/codeigniter-development-menu-icon.svg",
-                                    "alt":"codeigniter-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"CodeIgniter Development"
@@ -422,12 +288,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/shopify-development-menu-icon.svg",
-                                    "alt":"shopify-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Shopify Development"
@@ -435,12 +297,8 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/magento-development-menu-icon.svg",
-                                    "alt":"magento-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Magento Development"
@@ -448,32 +306,15 @@ export default function handler(req, res) {
                             }
                         },
                         {
-                            "SubMenuItems":{
-                                "Image":{
-                                    "url":"/images/woo-commerce-development-menu-icon.svg",
-                                    "alt":"woo-commerce-development"
-                                },
-                                "Link":{
+                            "submenuitems":{
+                                "link":{
                                     "url":"#",
                                     "target":null,
                                     "title":"Woo Commerce Development"
                                 }
                             }
                         }
-                    ],
-                    "navblogs":{
-                        "title":"We offer tech assistance to small, medium, and enterprise-sized businesses.",
-                        "image":{
-                            "url":"/images/technology-menu.svg",
-                            "alt":"technology-menu",
-                        },
-                        "discription":"Are you working on next-generation technologies?",
-                        "button":{
-                            "title": "Get a Qoute",
-                            "url": "#",
-                            "target": ""
-                        }
-                    }
+                    ]
                 },
                 {
                     "navmenuitem":{
