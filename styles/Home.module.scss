@@ -62,7 +62,6 @@
 .counter{
     .counterrow{display:grid;grid-gap:20px 30px;grid-template-columns:repeat(4, 1fr);}
     .counterbox{padding:20px;border:1px solid $grey;border-radius:10px;display:grid;grid-gap:10px;}
-    p{font-size:15px;}
 }
 
 @media screen and (max-width:1150px) and (min-width:992px){
