@@ -37,7 +37,6 @@ export default function Header() {
     const toggleSubMenu = (index) => {
         setOpenSubMenuIndex(prevIndex => (prevIndex === index ? null : index));
     };
-    console.log(data);
     return (
         <>
             <header className={style.main}>
@@ -45,14 +44,13 @@ export default function Header() {
                     <div className={style.navbar}>
                         {data?.logo && (
                         <Link className={style.logo} href='/' target='_self'>
-                            {/* <Image
+                            <Image
                                 src={data?.logo.url}
                                 alt={data?.logo.alt}
                                 width={192}
                                 height={44}
                                 priority={false}
-                            /> */}
-                            <h4>Logo</h4>
+                            />
                         </Link>
                         )}
                         {isUnwrapped ? (<></>):(

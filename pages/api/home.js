@@ -2,10 +2,10 @@ export default function handler(req, res) {
     res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
     res.status(200).json({
         "banner": {
-            "heading": "Your Trusted Partner for Advanced Software and Innovative Digital Solutions, Whenever You Need Us!",
-            "subheading": "With a passion for technology and a commitment to your success, we craft Website & Application solutions that truly fit your needs. Our team blends deep technical knowledge with creative problem-solving to deliver intuitive, scalable solutions. We're here to turn your vision into reality, with a focus on what matters most to you.",
+            "heading": "Top Rated Web Design & Development Company",
+            "subheading": "We craft high-performing websites and SaaS products by combining data-driven CRO, user research, and pixel-perfect design to deliver exceptional digital experiences.",
             "image": {
-                 "url": "/image/hero-banner.svg",
+                 "url": "/images/hero-banner.svg",
                 "alt": "hero-banner"
             },
             "button": {
@@ -14,6 +14,24 @@ export default function handler(req, res) {
                 "title": "Get a Quote"
             }
         },
+        "counter":[
+            {
+                "number":"7+",
+                "title":"Years Of Experience"
+            },
+            {
+                "number":"200+",
+                "title":"Pleased Clients"
+            },
+            {
+                "number":"700+",
+                "title":"Solutions Delivered"
+            },
+            {
+                "number":"75+",
+                "title":"Expert Professionals"
+            }
+        ],
         "aboutus":{
             "headingtag":"About",
             "heading":"Flexible ways we can work with you.",
