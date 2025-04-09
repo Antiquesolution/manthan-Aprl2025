@@ -1,6 +1,7 @@
 import React from 'react';
-import style from '@/styles/home.module.scss'
-import Header from '@/component/Header';
+import style from '../styles/home.module.scss';
+import Header from '../component/Header';
+import Industry from '@/component/Industry';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -53,7 +54,7 @@ export default function index() {
                 });
             }
         },[data]);
-        console.log(data)
+        // console.log(data)
     return (
         <>
             <Header />
@@ -90,7 +91,7 @@ export default function index() {
             {data?.aboutus && (
             <div className={style.aboutus}>
                 <div className={style.container}>
-                    <div className={style.maintitle}>
+                    <div className={`${style.maintitle} ${style.centertitle}`}>
                         <div className={style.title}>{data?.aboutus.maintitle}</div>
                         <h2>{data?.aboutus.title}</h2>
                         <p>{data?.aboutus.subtitle}</p>
@@ -163,8 +164,15 @@ export default function index() {
                                 </div>
                                 )}
                                 <div className={style.servicesinfo}>
-                                    <h3>{data?.title}</h3>
+                                    <h4>{data?.title}</h4>
                                     <p>{data?.subtitle}</p>
+                                    <Link
+                                        className={style.buttonlink}
+                                        href={data?.button.url}
+                                        target={data?.button.target || '_self'}
+                                    >
+                                        {data?.button.title}
+                                    </Link>
                                 </div>
                             </div>
                             ))}
@@ -173,6 +181,7 @@ export default function index() {
                 </div>
             </div>
             )}
+            <Industry />
         </>
     )
 }

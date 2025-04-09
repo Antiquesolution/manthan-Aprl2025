@@ -6,7 +6,7 @@
 @media screen and (min-width:1536px){
     .container{max-width: 1536px;}
 }
-.button{padding:15px 20px; display:flex; align-items:center; justify-content:center; width:fit-content; background:$secondary; color:$white; grid-gap: 14px; border: 1px solid $secondary; border-radius:60px; font-style:normal; font-weight:500; font-size:16px; line-height:19px; position:relative; box-shadow:none; outline:none; z-index:1;transition:.5s all;
+.button{padding:15px 20px;display:flex;align-items:center;justify-content:center;width:fit-content;background:$secondary;color:$white;grid-gap:14px;border:1px solid $secondary; border-radius:60px; font-style:normal; font-weight:500; font-size:16px; line-height:19px; position:relative; box-shadow:none; outline:none; z-index:1;transition:.5s all;
   &:after{content:''; position:absolute; left:-6px; top:-6px; bottom:-6px; right:-6px; background:transparent; border-radius:60px; border:6px solid rgba($primary,.15); z-index:-1;}
   &:before{content:'';background:url(/images/button-arrow.svg);width:30px;height:30px;transition:.5s all;}
   &:hover{background-color:$primary;border-color:$primary;
@@ -14,25 +14,35 @@
   }
 }
 
+.buttonlink{color:$secondary;display:flex;align-items:center;grid-gap:14px;font-weight:500;transition:.5s all;
+    &::after{content:'';background:url(/images/button-arrow-white.svg);width:30px;height:30px;transition:.5s all;}
+    &:hover{color:$primary;
+        &:after{transform:rotate(45deg);}
+    }
+}
+
 .banner{padding-top:100px;padding-bottom:60px;}
 .aboutus{padding-top:60px;padding-bottom:60px;}
 .services{padding-top:60px;padding-bottom:60px;}
-.maintitle{margin-bottom:80px;
+.maintitle{margin-bottom:50px;
     .title{border:1px solid $darkgrey;border-radius:30px;color:$secondary;display: inline-block;font-size:18px;font-weight:400;margin-bottom:30px;padding:6px 16px;text-transform:capitalize;
         &::before{content:'';width:16px;height:16px;margin-right:10px;background-image:url(/images/top-title.svg);display:inline-block;background-repeat:no-repeat;background-size:cover;}
     }
 	h2{margin-bottom:20px;}
 }
+
+.centertitle{max-width:1200px;margin-left:auto;margin-right:auto;text-align:center;}
+
 @media screen and (max-width:1150px){
 	.banner{padding-top:60px;padding-bottom:30px;}
     .aboutus{padding-top:30px;padding-bottom:30px;}
     .services{padding-top:30px;padding-bottom:30px;}
-	.maintitle{margin-bottom:50px;}
+	.maintitle{margin-bottom:30px;}
 }
 @media screen and (max-width:767px){
-	.banner{padding-top:40px;padding-bottom:20px;}
-    .aboutus{padding-top:20px;padding-bottom:20px;}
-    .services{padding-top:20px;padding-bottom:20px;}
+	// .banner{padding-top:40px;padding-bottom:20px;}
+    // .aboutus{padding-top:20px;padding-bottom:20px;}
+    // .services{padding-top:20px;padding-bottom:20px;}
 }
 
 .banner{
@@ -86,7 +96,6 @@
 }
 
 .aboutus{
-    .maintitle{max-width:1100px;margin-left:auto;margin-right:auto;text-align:center;}
     .aboutusrow{display:grid;grid-template-columns:repeat(4, 1fr);grid-gap:50px 30px;text-align:center;}
     .aboutusbox{display:grid;grid-gap:20px;
         h4{font-weight:400;}

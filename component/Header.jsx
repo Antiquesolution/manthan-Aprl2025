@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '@/styles/header.module.scss'
-import { useState, useEffect, useRef } from 'react';
+import {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 export default function Header() {
@@ -45,7 +45,7 @@ export default function Header() {
                         {data?.logo && (
                         <Link className={style.logo} href='/' target='_self'>
                             <Image
-                                style={{opacity:0}}
+                                // style={{opacity:0}}
                                 src={data?.logo.url}
                                 alt={data?.logo.alt}
                                 width={192}

@@ -1,5 +1,4 @@
 export default function handler(req, res) {
-    res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
     res.status(200).json({
         "banner": {
             "heading": "Top Rated Web Design & Development Company",
