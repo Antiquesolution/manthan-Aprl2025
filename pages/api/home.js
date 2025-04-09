@@ -33,9 +33,9 @@ export default function handler(req, res) {
             }
         ],
         "aboutus":{
-            "headingtag":"About",
-            "heading":"Flexible ways we can work with you.",
-            "subheading":"At Manthan Technologies., a Web development company, we believe in working the way that works best for you. We offer flexible, customized solutions to meet your unique needs. Our passionate team of tech enthusiasts, dreamers, and problem solvers is driven by innovation, using the latest in AI technology to reshape the IT landscape. Whether it's crafting dynamic software, building stunning websites, creating transformative mobile apps, or leveraging AI-powered innovations, our mission is simple: to bring your vision to life.",
+            "maintitle":"About Us",
+            "title":"Technology That Drives Progress.",
+            "subtitle":"We are honored to be considered among the Best Web & App Development Agencies in India, offering Creative Web Designs, top Website Development, unique Mobile App, and SEO Services to global clients.",
             "aboutinfo":[
                 {
                     "image":{
@@ -64,6 +64,109 @@ export default function handler(req, res) {
                         "alt":"future"
                     },
                     "title":"Shape Your Future with Us"
+                }
+            ]
+        },
+        "services":{
+            "maintitle":"Our Services",
+            "title":"We're committed to delivering the best services to help your business grow",
+            "subtitle":"At Manthan Technologies, we merge technical expertise with creativity and innovation to build solutions that are robust, scalable, and user-friendly. Our goal is to meet the unique and diverse needs of your business, helping you succeed in an ever-evolving digital landscape.",
+            "button":{
+                "url":"/contact-us",
+                "target":"_self",
+                "title":"Contact Us"
+            },
+            "serviceslist":[
+                {
+                    "title":"Web & App Development",
+                    "subtitle":"Manthan Technologies delivers innovative solutions with expert precision, ensuring client satisfaction in websites, apps, and software.",
+                    "image":{
+                        "url":"/images/web-app-development.svg",
+                        "alt":"web-app-development"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
+                },
+                {
+                    "title":"Web Design",
+                    "subtitle":"Manthan Technologies transforms your ideas into exceptional designs that elevate your brand and vision.",
+                    "image":{
+                        "url":"/images/web-design.svg",
+                        "alt":"web-design"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
+                },
+                {
+                    "title":"Frontend Development",
+                    "subtitle":"Manthan Technologies crafts engaging and custom frontend solutions to deliver exceptional user experiences and drive business success.",
+                    "image":{
+                        "url":"/images/frontend-development.svg",
+                        "alt":"frontend-development"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
+                },
+                {
+                    "title":"Mobile App Development",
+                    "subtitle":"Manthan Technologies delivers innovative mobile app solutions, from user-centric designs to enterprise-class development, with ongoing support for all businesses.",
+                    "image":{
+                        "url":"/images/mobile-app-development.svg",
+                        "alt":"mobile-app-development"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
+                },
+                {
+                    "title":"CMS Development",
+                    "subtitle":"Manthan Technologies provides custom CMS solutions with seamless functionality, security, and scalability to streamline your workflows.",
+                    "image":{
+                        "url":"/images/cms-development.svg",
+                        "alt":"cms-development"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
+                },
+                {
+                    "title":"eCommerce Website Development",
+                    "subtitle":"Manthan Technologies delivers end-to-end eCommerce solutions to power your business and excel in the competitive online marketplace.",
+                    "image":{
+                        "url":"/images/ecommerce-development.svg",
+                        "alt":"ecommerce-development"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
+                },
+                {
+                    "title":"Backend Development",
+                    "subtitle":"Manthan Technologies provides cutting-edge backend development services to boost your app&#8217;s performance, security, and reliability.",
+                    "image":{
+                        "url":"/images/backend-development.svg",
+                        "alt":"backend-development"
+                    },
+                    "button":{
+                        "url": "#",
+                        "target": "_self",
+                        "title": "Learn More",
+                    }
                 }
             ]
         }

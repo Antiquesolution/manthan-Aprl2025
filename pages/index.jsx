@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '@/styles/Home.module.scss'
+import style from '@/styles/home.module.scss'
 import Header from '@/component/Header';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -87,16 +87,88 @@ export default function index() {
                 </div>
             </div>
             )}
-            {data?.counter &&(
-            <div className={style.counter}>
+            {data?.aboutus && (
+            <div className={style.aboutus}>
                 <div className={style.container}>
-                    <div className={style.counterrow}>
-                        {data?.counter?.map((data, index) => (
-                        <div className={style.counterbox} key={index}>
-                            <h2 ref={(el) => (counterRefs.current[index] = el)}data-count={data?.number}>0</h2>
+                    <div className={style.maintitle}>
+                        <div className={style.title}>{data?.aboutus.maintitle}</div>
+                        <h2>{data?.aboutus.title}</h2>
+                        <p>{data?.aboutus.subtitle}</p>
+                    </div>
+                    {data?.counter &&(
+                    <div className={style.counter}>
+                        <div className={style.counterrow}>
+                            {data?.counter?.map((data, index) => (
+                            <div className={style.counterbox} key={index}>
+                                <h2 ref={(el) => (counterRefs.current[index] = el)}data-count={data?.number}>0</h2>
+                                <p>{data?.title}</p>
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                    )}
+                    {/* {data?.aboutus.aboutinfo && (
+                    <div className={style.aboutusrow}>
+                        {data?.aboutus.aboutinfo?.map((data, index) => (
+                        <div className={style.aboutusbox} key={index}>
+                            {data?.image && (
+                            <div className={style.aboutusicon}>
+                                <Image 
+                                    src={data?.image.url}
+                                    alt={data?.image.alt}
+                                    width={100}
+                                    height={100}
+                                    priority='false'
+                                />
+                            </div>
+                            )}
                             <p>{data?.title}</p>
                         </div>
                         ))}
+                    </div>
+                    )} */}
+                </div>
+            </div>
+            )}
+            {data?.services && (
+            <div className={style.services}>
+                <div className={style.container}>
+                    <div className={style.servicesrow}>
+                        <div>
+                            <div className={style.maintitle}>
+                                <div className={style.title}>{data?.services.maintitle}</div>
+                                <h2>{data?.services.title}</h2>
+                                <p>{data?.services.subtitle}</p>
+                                <Link
+                                    className={style.button}
+                                    href={data?.services.button.url}
+                                    target={data?.services.button.target || '_self'}
+                                >
+                                    {data?.services.button.title}
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={style.serviceslist}>
+                            {data?.services.serviceslist?.map((data, index) => (
+                            <div className={style.servicesbox} key={index}>
+                                {data?.image && (
+                                <div className={style.servicesicon}>
+                                    <Image 
+                                        src={data?.image.url}
+                                        alt={data?.image.alt}
+                                        width={50}
+                                        height={50}
+                                        priority='falses'
+                                    />
+                                </div>
+                                )}
+                                <div className={style.servicesinfo}>
+                                    <h3>{data?.title}</h3>
+                                    <p>{data?.subtitle}</p>
+                                </div>
+                            </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

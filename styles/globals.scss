@@ -1,6 +1,6 @@
 @use '../styles/varible' as *;
 *,*:after,*:before{box-sizing:border-box;}
-body{margin:0;padding:0;font-weight:400;font-family: 'Open Sans', serif;background-color:$light;}
+body{margin:0;padding:0;font-weight:400;font-family: 'Outfit', serif;background-color:$light;}
 /* Typography */
 a, h1, h2, h3, h4, h5, h6, p, div, img, article, figure{text-decoration:none;padding:0px;margin:0px;}
 :is(h1,h2,h3,h4,h5,h6){color:$secondary;font-weight:600;line-height:1.3;}
