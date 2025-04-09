@@ -157,7 +157,7 @@ export default function handler(req, res) {
                 },
                 {
                     "title":"Backend Development",
-                    "subtitle":"Manthan Technologies provides cutting-edge backend development services to boost your app&#8217;s performance, security, and reliability.",
+                    "subtitle":"Manthan Technologies provides cutting-edge backend development services to boost your app's performance, security, and reliability.",
                     "image":{
                         "url":"/images/backend-development.svg",
                         "alt":"backend-development"

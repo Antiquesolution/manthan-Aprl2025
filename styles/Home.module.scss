@@ -103,14 +103,32 @@
 }
 
 .services{
-    .servicesrow{grid-template-columns:repeat(2, 1fr);grid-gap:30px 50px;display:grid;}
+    .servicesrow{grid-template-columns:repeat(2, 1fr);grid-gap:0 50px;display:grid;}
     .button{margin-top:50px;}
     .maintitle{position:sticky;top:130px;}
-    .servicesbox{margin:0 20px 0 0;padding:20px;display:flex;grid-gap:30px;border:1px solid $grey; margin-right:10px;border-radius:10px;
+    .servicesbox{padding:20px;display:flex;grid-gap:15px 30px;border:1px solid $grey;border-radius:10px;
         
         &:not(:last-child){margin-bottom:15px;}
     }
     .servicesicon{width:60px;height:60px;background-color:$lightred;}
     .servicesinfo{display:grid;grid-gap:10px;
+    }
+}
+
+// @media screen and (max-width:1200px) and (min-width:768px){
+//     .services{
+//         .maintitle{margin-bottom:0px;}
+//     }
+// }
+
+@media screen and (max-width:1200px){
+    .services{
+        .servicesrow{grid-template-columns:repeat(1, 1fr);}
+    }
+}
+
+@media screen and (max-width:767px){
+    .services{
+        .servicesbox{display:grid;}
     }
 }
