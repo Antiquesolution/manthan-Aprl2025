@@ -66,6 +66,10 @@ export default function handler(req, res) {
                 }
             ]
         },
+        "partner":{
+            "maintitle":"Partner",
+            "title":"Laying a solid foundation for digital core transformation for startups, SMEs, and enterprises with our pre-vetted resources and next-gen <span style=\"color:#DC1D47;\">ui/ux design</span>, <span style=\"color:#DC1D47;\">website development</span>, and <span style=\"color:#DC1D47;\">application development</span> services"
+        },
         "services":{
             "maintitle":"Our Services",
             "title":"We're committed to delivering the best services to help your business grow",
