@@ -16,7 +16,6 @@ export default function Industry() {
         };
         fetchAPI();
     }, []);
-    console.log(data)
     return (
         <>
             {data?.industries && (

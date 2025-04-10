@@ -2,6 +2,7 @@ import React from 'react';
 import style from '../styles/home.module.scss';
 import Header from '../component/Header';
 import Industry from '@/component/Industry';
+import Whyus from '@/component/Whyus';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -88,6 +89,20 @@ export default function index() {
                 </div>
             </div>
             )}
+            {data?.counter &&(
+            <div className={style.counter}>
+                <div className={style.container}>
+                    <div className={style.counterrow}>
+                        {data?.counter?.map((data, index) => (
+                        <div className={style.counterbox} key={index}>
+                            <h2 ref={(el) => (counterRefs.current[index] = el)}data-count={data?.number}>0</h2>
+                            <p>{data?.title}</p>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            )}
             {data?.aboutus && (
             <div className={style.aboutus}>
                 <div className={style.container}>
@@ -96,19 +111,7 @@ export default function index() {
                         <h2>{data?.aboutus.title}</h2>
                         <p>{data?.aboutus.subtitle}</p>
                     </div>
-                    {data?.counter &&(
-                    <div className={style.counter}>
-                        <div className={style.counterrow}>
-                            {data?.counter?.map((data, index) => (
-                            <div className={style.counterbox} key={index}>
-                                <h2 ref={(el) => (counterRefs.current[index] = el)}data-count={data?.number}>0</h2>
-                                <p>{data?.title}</p>
-                            </div>
-                            ))}
-                        </div>
-                    </div>
-                    )}
-                    {/* {data?.aboutus.aboutinfo && (
+                    {data?.aboutus.aboutinfo && (
                     <div className={style.aboutusrow}>
                         {data?.aboutus.aboutinfo?.map((data, index) => (
                         <div className={style.aboutusbox} key={index}>
@@ -117,8 +120,8 @@ export default function index() {
                                 <Image 
                                     src={data?.image.url}
                                     alt={data?.image.alt}
-                                    width={100}
-                                    height={100}
+                                    width={60}
+                                    height={60}
                                     priority='false'
                                 />
                             </div>
@@ -127,7 +130,7 @@ export default function index() {
                         </div>
                         ))}
                     </div>
-                    )} */}
+                    )}
                 </div>
             </div>
             )}
@@ -182,6 +185,7 @@ export default function index() {
             </div>
             )}
             <Industry />
+            <Whyus />
         </>
     )
 }
