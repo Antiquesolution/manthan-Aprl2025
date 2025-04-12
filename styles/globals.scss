@@ -17,3 +17,10 @@ h4{font-size:20px;}
 @media screen and (max-width:767px){
 	h1{font-size:30px;}h2{font-size:24px;}h3{font-size:18px;}h4{font-size:18px;}
 }
+.swiper-button-prev,
+.swiper-button-next{bottom:0;height:24px;margin:auto;top:0;width:24px;z-index:111;
+        &:after{color:$primary;font-size:20px !important;font-weight:900;}
+}
+.swiper-slide{height:auto !important;}
+.swiper-pagination-bullet{background-color:$grey !important;opacity:1 !important;}
+.swiper-pagination-bullet-active{background-color:$primary !important;}

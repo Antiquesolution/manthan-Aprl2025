@@ -1,15 +1,19 @@
 import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import style from '../styles/home.module.scss';
 import Header from '../component/Header';
 import Industry from '@/component/Industry';
 import Whyus from '@/component/Whyus';
-import { useState, useEffect, useRef } from 'react';
+import Technologies from '@/component/Technologies';
+import Testimonials from '@/component/Testimonials';
+import Recentblog from '@/component/recentblog';
 import Link from 'next/link';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export default function index() {
     const [data, setAPIData] = useState(null);
+    const [FAQsTab, setFAQsTab] = useState(null);
     const counterRefs = useRef([]);
      useEffect(() => {
         const fetchAPI = async () => {
@@ -23,6 +27,9 @@ export default function index() {
         };
         fetchAPI();
         }, []);
+        const handleToggle = (index) => {
+            setFAQsTab(FAQsTab === index ? null : index);
+        };
         useEffect(() => {
             if (data?.counter) {
                 gsap.registerPlugin(ScrollTrigger);
@@ -186,6 +193,41 @@ export default function index() {
             )}
             <Industry />
             <Whyus />
+            <Technologies />
+            <Testimonials />
+            {data?.faqs &&(
+            <div className={style.accordion}>
+                <div className={style.container}>
+                    <div className={style.row}>
+                        <div className={style.accordionsidebar}>
+                            <div className={style.maintitle}>
+                                <div className={style.title}>{data?.faqs.maintitle}</div>
+                                <h2>{data?.faqs.title}</h2>
+                                <p>{data?.faqs.subtitle}</p>
+                            </div>
+                        </div>
+                        <div className={style.accordionslist}>
+                            {data?.faqs.faqslist.map((data, index) => (
+                                <div className={style.accordionsitem} key={index}>
+                                    <div
+                                        className={style.accordionsheader}
+                                        onClick={() => handleToggle(index)}
+                                        role="button"
+                                        tabIndex={0}
+                                        aria-expanded={FAQsTab === index ? true:false}
+                                    >
+                                        <p>{data?.question}</p>
+                                        <i className={style.accordionsicon}></i>
+                                    </div>
+                                    <div className={style.accordionsdata} hidden={FAQsTab === index ? false:true} dangerouslySetInnerHTML={{ __html: data?.answer }} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            )}
+            <Recentblog />
         </>
     )
 }

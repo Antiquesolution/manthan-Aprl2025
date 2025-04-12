@@ -16,7 +16,6 @@ export default function Whyus() {
         };
         fetchAPI();
     }, []);
-    console.log(data)
     return (
         <>
             {data?.whyus && (

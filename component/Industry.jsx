@@ -1,9 +1,11 @@
 import React from 'react'
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import style from '../styles/industries.module.scss';
 import Image from 'next/image';
+import gsap from "gsap";
 export default function Industry() {
     const [data, setAPIData] = useState(null);
+    const elementsRef = useRef([]);
     useEffect(() => {
         const fetchAPI = async () => {
             try {
@@ -16,6 +18,40 @@ export default function Industry() {
         };
         fetchAPI();
     }, []);
+    useEffect(() => {
+        if (elementsRef.current.length === 0) return;
+        gsap.set(elementsRef.current, {
+          opacity: 0,
+          y: 40,
+        });
+        const timeline = gsap.timeline();
+        const observer = new IntersectionObserver(
+          (entries, observerInstance) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const delay = timeline.isActive() ? "-=0.3" : "+=0";
+                timeline.to(
+                  entry.target,
+                  {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.4,
+                    ease: "power3.out",
+                  },
+                  delay
+                );
+    
+                observerInstance.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+        elementsRef.current.forEach((el) => {
+          if (el) observer.observe(el);
+        });
+        return () => observer.disconnect();
+      },[data]);
     return (
         <>
             {data?.industries && (
@@ -28,7 +64,7 @@ export default function Industry() {
                     </div>
                     <div className={style.industriesrow}>
                         {data?.industries.industrieslist?.map((data, index) => (
-                        <div className={style.industriesbox} key={index}>
+                        <div className={style.industriesbox} key={index}  ref={(el) => (elementsRef.current[index] = el)}>
                             {data?.image && (
                             <div className={style.industriesicon}>
                                 <Image 
