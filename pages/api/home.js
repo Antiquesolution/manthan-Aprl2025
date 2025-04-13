@@ -1,8 +1,8 @@
 export default function handler(req, res) {
     res.status(200).json({
         "banner": {
-            "heading": "Top Rated Web Design & Development Company",
-            "subheading": "We craft high-performing websites and SaaS products by combining data-driven CRO, user research, and pixel-perfect design to deliver exceptional digital experiences.",
+            "title": "Top Rated Web Design & Development Company",
+            "subtitle": "We craft high-performing websites and SaaS products by combining data-driven CRO, user research, and pixel-perfect design to deliver exceptional digital experiences.",
             "image": {
                  "url": "/images/hero-banner.svg",
                 "alt": "hero-banner"

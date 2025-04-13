@@ -18,7 +18,6 @@ export default function Testimonials() {
         };
         fetchAPI();
     }, []);
-    console.log(data)
     return (
         <>
             {data?.testimonials ? (

@@ -19,39 +19,31 @@ export default function Industry() {
         fetchAPI();
     }, []);
     useEffect(() => {
-        if (elementsRef.current.length === 0) return;
-        gsap.set(elementsRef.current, {
-          opacity: 0,
-          y: 40,
-        });
-        const timeline = gsap.timeline();
-        const observer = new IntersectionObserver(
-          (entries, observerInstance) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const delay = timeline.isActive() ? "-=0.3" : "+=0";
-                timeline.to(
-                  entry.target,
-                  {
+      if (!elementsRef.current || elementsRef.current.length === 0) return;
+      const elements = elementsRef.current.filter(Boolean);
+      gsap.set(elements, { opacity: 0, y: 40 });
+      const timeline = gsap.timeline();
+      const observer = new IntersectionObserver(
+        (entries, observerInstance) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const delay = timeline.isActive() ? "-=0.3" : "+=0";
+              timeline.to(entry.target, {
                     autoAlpha: 1,
                     y: 0,
                     duration: 0.4,
                     ease: "power3.out",
-                  },
-                  delay
-                );
-    
+                }, delay);
                 observerInstance.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.5 }
-        );
-        elementsRef.current.forEach((el) => {
-          if (el) observer.observe(el);
-        });
-        return () => observer.disconnect();
-      },[data]);
+            }
+          });
+        },
+        { threshold:0.9}
+      );
+      requestAnimationFrame(() => {
+        elements.forEach((el) => observer.observe(el));
+      });
+    }, [data]);
     return (
         <>
             {data?.industries && (

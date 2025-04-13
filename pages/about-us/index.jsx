@@ -1,11 +1,9 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import style from '../styles/home.module.scss';
-import Header from '../component/Header';
+import style from '@/styles/about.module.scss';
+import Header from '@/component/Header';
 import Footer from '@/component/Footer';
-import Industry from '@/component/Industry';
 import Whyus from '@/component/Whyus';
-import Technologies from '@/component/Technologies';
 import Testimonials from '@/component/Testimonials';
 import Recentblog from '@/component/recentblog';
 import Link from 'next/link';
@@ -19,11 +17,11 @@ export default function index() {
      useEffect(() => {
         const fetchAPI = async () => {
             try {
-                const res = await fetch('/api/home');
+                const res = await fetch('/api/about');
                 const data = await res.json();  
                 setAPIData(data);
             }catch (error){
-                console.error("Error fetching Header Module", error);
+                console.error("Error fetching About Module", error);
             }
         };
         fetchAPI();
@@ -63,6 +61,7 @@ export default function index() {
                 });
             }
         },[data]);
+        console.log(data)
     return (
         <>
             <Header />
@@ -110,123 +109,85 @@ export default function index() {
                 </div>
             </div>
             )}
-            {data?.aboutus && (
-            <div className={style.aboutus}>
+            {data?.mission && (
+            <div className={style.missionvision}>
                 <div className={style.container}>
                     <div className={`${style.maintitle} ${style.centertitle}`}>
-                        <div className={style.title}>{data?.aboutus.maintitle}</div>
-                        <h2>{data?.aboutus.title}</h2>
-                        <p>{data?.aboutus.subtitle}</p>
+                        <div className={style.title}>{data?.mission.maintitle}</div>
+                        <h2>{data?.mission.title}</h2>
+                        <p>{data?.mission.subtitle}</p>
                     </div>
-                    {data?.aboutus.aboutinfo && (
-                    <div className={style.aboutusrow}>
-                        {data?.aboutus.aboutinfo?.map((data, index) => (
-                        <div className={style.aboutusbox} key={index}>
+                    <div className={style.missionvisionrow}>
+                        {data?.mission.missionlist?.map((data, index) => (
+                        <div className={style.missionvisioninfo} key={index}>
                             {data?.image && (
-                            <div className={style.aboutusicon}>
+                            <div className={style.missionvisionicon}>
                                 <Image 
                                     src={data?.image.url}
                                     alt={data?.image.alt}
-                                    width={60}
-                                    height={60}
+                                    width={50}
+                                    height={50}
                                     priority='false'
                                 />
                             </div>
                             )}
-                            <p>{data?.title}</p>
+                            <h3>{data?.title}</h3>
+                            <p>{data?.content}</p>
                         </div>
                         ))}
                     </div>
-                    )}
                 </div>
             </div>
             )}
-            {data?.services && (
-            <div className={style.services}>
+            {data?.ourvalue && (
+            <div className={style.corevalue}>
                 <div className={style.container}>
-                    <div className={style.servicesrow}>
-                        <div>
+                    <div className={style.corevaluerow}>
+                        {data?.ourvalue.image && (
+                        <div className={style.corevalueimage}>
+                            <Image 
+                                src={data?.ourvalue.image.url}
+                                alt={data?.ourvalue.image.alt}
+                                width={600}
+                                height={400}
+                                style={{'width':'auto','height':'auto'}}
+                            />
+                        </div>
+                        )}
+                        <div className={style.maintitle}>
+                            <div className={style.title}>{data?.ourvalue.maintitle}</div>
+                             <h2>{data?.ourvalue.title}</h2>
+                            <p>{data?.ourvalue.subtitle}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            )}
+            {data?.businesshelp && (
+            <div className={style.business}>
+                <div className={style.container}>
+                    <div className={style.businessrow}>
+                        <div className={style.businesstitle}>
                             <div className={style.maintitle}>
-                                <div className={style.title}>{data?.services.maintitle}</div>
-                                <h2>{data?.services.title}</h2>
-                                <p>{data?.services.subtitle}</p>
-                                <Link
-                                    className={style.button}
-                                    href={data?.services.button.url}
-                                    target={data?.services.button.target || '_self'}
-                                >
-                                    {data?.services.button.title}
-                                </Link>
+                                <div className={style.title}>{data?.businesshelp.maintitle}</div>
+                                <h2>{data?.businesshelp.title}</h2>
+                                <p>{data?.businesshelp.subtitle}</p>
                             </div>
                         </div>
-                        <div className={style.serviceslist}>
-                            {data?.services.serviceslist?.map((data, index) => (
-                            <div className={style.servicesbox} key={index}>
-                                {data?.image && (
-                                <div className={style.servicesicon}>
-                                    <Image 
-                                        src={data?.image.url}
-                                        alt={data?.image.alt}
-                                        width={50}
-                                        height={50}
-                                        priority='falses'
-                                    />
-                                </div>
-                                )}
-                                <div className={style.servicesinfo}>
-                                    <h4>{data?.title}</h4>
+                        <div className={style.details}>
+                                {data?.businesshelp.details?.map((data, index) => (
+                                <div className={style.detailsitem} key={index}>
+                                    <h3>{data?.title}</h3>
                                     <p>{data?.subtitle}</p>
-                                    <Link
-                                        className={style.buttonlink}
-                                        href={data?.button.url}
-                                        target={data?.button.target || '_self'}
-                                    >
-                                        {data?.button.title}
-                                    </Link>
                                 </div>
+                                ))}
                             </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </div>
             )}
-            <Industry />
             <Whyus />
-            <Technologies />
             <Testimonials />
-            {data?.faqs &&(
-            <div className={style.accordion}>
-                <div className={style.container}>
-                    <div className={style.row}>
-                        <div className={style.accordionsidebar}>
-                            <div className={style.maintitle}>
-                                <div className={style.title}>{data?.faqs.maintitle}</div>
-                                <h2>{data?.faqs.title}</h2>
-                                <p>{data?.faqs.subtitle}</p>
-                            </div>
-                        </div>
-                        <div className={style.accordionslist}>
-                            {data?.faqs.faqslist.map((data, index) => (
-                                <div className={style.accordionsitem} key={index}>
-                                    <div
-                                        className={style.accordionsheader}
-                                        onClick={() => handleToggle(index)}
-                                        role="button"
-                                        tabIndex={0}
-                                        aria-expanded={FAQsTab === index ? true:false}
-                                    >
-                                        <p>{data?.question}</p>
-                                        <i className={style.accordionsicon}></i>
-                                    </div>
-                                    <div className={style.accordionsdata} hidden={FAQsTab === index ? false:true} dangerouslySetInnerHTML={{ __html: data?.answer }} />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            )}
             <Recentblog />
             <Footer />
         </>
