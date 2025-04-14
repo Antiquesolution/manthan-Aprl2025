@@ -24,3 +24,12 @@ h4{font-size:20px;}
 .swiper-slide{height:auto !important;}
 .swiper-pagination-bullet{background-color:$grey !important;opacity:1 !important;}
 .swiper-pagination-bullet-active{background-color:$primary !important;}
+
+.responsive{width:100%;overflow:auto;}
+table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;border:1px solid $grey;width:100%;
+	thead, tbody{
+		tr{
+			th, td{padding:20px;text-align:left;border:1px solid $grey;}
+		}
+	}
+}

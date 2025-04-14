@@ -14,7 +14,7 @@ export default function index() {
     const [data, setAPIData] = useState(null);
     const [FAQsTab, setFAQsTab] = useState(null);
     const counterRefs = useRef([]);
-     useEffect(() => {
+    useEffect(() => {
         const fetchAPI = async () => {
             try {
                 const res = await fetch('/api/about');
