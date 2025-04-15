@@ -16,34 +16,39 @@ export default function Industry() {
                 console.error("Error fetching Industries Module", error);
             }
         };
-        fetchAPI();
+        // fetchAPI();
+        const timer = setTimeout(() => {
+            fetchAPI();
+          }, 3000); // 3s delay
+      
+          return () => clearTimeout(timer);
     }, []);
     useEffect(() => {
-      if (!elementsRef.current || elementsRef.current.length === 0) return;
-      const elements = elementsRef.current.filter(Boolean);
-      gsap.set(elements, { opacity: 0, y: 60 });
-      const timeline = gsap.timeline();
-      const observer = new IntersectionObserver(
-        (entries, observerInstance) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const delay = timeline.isActive() ? "-=0.3" : "+=0";
-              timeline.to(entry.target, {
-                    autoAlpha: 1,
-                    y: 0,
-                    duration: 0.4,
-                    ease: "power3.out",
-                }, delay);
-                observerInstance.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold:0.9}
-      );
-      requestAnimationFrame(() => {
-        elements.forEach((el) => observer.observe(el));
-      });
-    }, [data]);
+        if (!elementsRef.current || elementsRef.current.length === 0) return;
+        const elements = elementsRef.current.filter(Boolean);
+        gsap.set(elements, { opacity: 0, y: 60 });
+        const timeline = gsap.timeline();
+        const observer = new IntersectionObserver(
+            (entries, observerInstance) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const delay = timeline.isActive() ? "-=0.3" : "+=0";
+                            timeline.to(entry.target, {
+                            autoAlpha: 1,
+                            y: 0,
+                            duration: 0.4,
+                            ease: "power3.out",
+                        }, delay);
+                        observerInstance.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold:0.9}
+        );
+        requestAnimationFrame(() => {
+            elements.forEach((el) => observer.observe(el));
+        });
+      }, [data]);
     return (
         <>
             {data?.industries && (

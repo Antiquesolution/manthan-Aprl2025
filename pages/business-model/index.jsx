@@ -22,7 +22,6 @@ export default function index() {
         };
         fetchAPI();
     }, []);
-    console.log(data);
     return (
         <>
             <Header />
