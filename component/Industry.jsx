@@ -21,7 +21,7 @@ export default function Industry() {
     useEffect(() => {
       if (!elementsRef.current || elementsRef.current.length === 0) return;
       const elements = elementsRef.current.filter(Boolean);
-      gsap.set(elements, { opacity: 0, y: 40 });
+      gsap.set(elements, { opacity: 0, y: 60 });
       const timeline = gsap.timeline();
       const observer = new IntersectionObserver(
         (entries, observerInstance) => {

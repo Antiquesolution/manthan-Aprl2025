@@ -45,7 +45,7 @@ export default function Header() {
                         {data?.logo && (
                         <Link className={style.logo} href='/' target='_self'>
                             <Image
-                                // style={{opacity:0}}
+                                style={{opacity:0}}
                                 src={data?.logo.url}
                                 alt={data?.logo.alt}
                                 width={192}
