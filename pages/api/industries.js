@@ -2,7 +2,7 @@ export default function handler(req, res) {
     res.status(200).json({
         "industries":{
             "maintitle":"Industry",
-            "title":"We helping businesses in all domains",
+            "title":"We helping businesses in all domains",
             "subtitle":"With deep industry expertise, we offer customized solutions using AI-powered 150 technologies that address business challenges and drive growth",
             "industrieslist":[
                 {

@@ -19,8 +19,7 @@ export default function Industry() {
         // fetchAPI();
         const timer = setTimeout(() => {
             fetchAPI();
-          }, 3000); // 3s delay
-      
+          }, 1000);
           return () => clearTimeout(timer);
     }, []);
     useEffect(() => {
