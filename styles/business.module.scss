@@ -35,7 +35,9 @@
     }
 	.main{padding-top:60px;padding-bottom:60px;}
     .difference{padding-top:30px;padding-bottom:30px;}
-	.maintitle{margin-bottom:30px;}
+	.maintitle{margin-bottom:30px;
+        .title{font-size:16px;}
+    }
 }
 @media screen and (max-width:767px){
     .main{

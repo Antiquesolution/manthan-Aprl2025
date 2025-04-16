@@ -1,16 +1,15 @@
 export default function handler(req, res) {
     res.status(200).json({
         "banner": {
-            "maintitle": "Working Method",
-            "title": "A deep dive into our innovative working methods",
-            "subtitle": "At Manthan Technologies, we ensure peace of mind with a transparent process and 7+ years of global expertise. Your satisfaction and confidence are our top priorities throughout the project journey.",
+            "title": "Working Method",
+            "subtitle": "It's undeniable that a hassle-free experience & systematic approach makes us feel like we're in right hands. Manthan Technologies takes care of this and assures that client is well-aware of the work progress & ongoing trends. With vast experience of service global clients for more than 7+ years, Manthan Technologies has now developed a process that ensures clients can get utmost satisfaction and relaxation while their project is in progress as well as after it's done.",
             "button": {
                 "url": "#",
                 "title": "Get Started",
                 "target": ""
             },
             "image": {
-                "url": "/images/workingmethod-banner.jpg",
+                "url": "/images/workingmethod-banner.svg",
                 "alt": "workingmethod-banner"
             }
         },

@@ -1,8 +1,5 @@
 @use '../styles/varible' as *;
 .container{max-width:100%;padding-left:20px;padding-right:20px;width:100%;margin-left:auto;margin-right:auto;}
-// @media screen and (min-width:1366px){
-//   .container{max-width: 1200px;}
-// }
 @media screen and (min-width:1536px){
     .container{max-width: 1536px;}
 }
@@ -16,7 +13,9 @@
 .centertitle{max-width:1200px;margin-left:auto;margin-right:auto;text-align:center;}
 @media screen and (max-width:1150px){
     .main{padding-top:30px;padding-bottom:30px;}
-	.maintitle{margin-bottom:50px;}
+	.maintitle{margin-bottom:50px;
+        .title{font-size:16px;}
+    }
 }
 .main{
     .industriesrow{display:grid;grid-gap:60px 30px;grid-template-columns:repeat(4, 1fr);}
