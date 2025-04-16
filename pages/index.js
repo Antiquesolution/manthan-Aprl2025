@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import style from '../styles/home.module.scss';
-import Header from '../component/Header';
+import Header from '@/component/Header';
 import Footer from '@/component/Footer';
 import Industry from '@/component/Industry';
 import Whyus from '@/component/Whyus';

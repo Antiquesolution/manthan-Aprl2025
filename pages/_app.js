@@ -1,4 +1,3 @@
-// pages/_app.js
 import "@/styles/globals.scss";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -50,7 +49,7 @@ export default function App({ Component, pageProps }) {
       });
       ScrollTrigger.refresh();
     };
-    setTimeout(() => requestAnimationFrame(animateSplitText), 1000);
+    setTimeout(() => requestAnimationFrame(animateSplitText), 1200);
     const handleRouteChange = () => {
       setTimeout(() => requestAnimationFrame(animateSplitText), 1000);
     };
@@ -60,6 +59,5 @@ export default function App({ Component, pageProps }) {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, [router.events]);
-
   return <Component {...pageProps} />;
 }
