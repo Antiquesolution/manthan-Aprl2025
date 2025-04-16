@@ -16,12 +16,6 @@
         &:after{transform:rotate(45deg);}
     }
 }
-.buttonlink{color:$secondary;display:inline-flex;align-items:center;grid-gap:14px;font-weight:500;transition:.5s all;width:max-content;
-    &::after{content:'';background:url(/images/button-arrow-white.svg);width:30px;height:30px;transition:.5s all;}
-    &:hover{color:$primary;
-        &:after{transform:rotate(45deg);}
-    }
-}
 
 .main{padding-top:100px;padding-bottom:100px;}
 .difference{padding-top:60px;padding-bottom:60px;}
