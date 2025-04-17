@@ -1,4 +1,5 @@
 import "@/styles/globals.scss";
+import "@/styles/fonts.scss";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

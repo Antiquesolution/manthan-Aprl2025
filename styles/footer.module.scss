@@ -1,15 +1,4 @@
-@use '../styles/varible' as *;
-.container{max-width:100%;padding-left:20px;padding-right:20px;width:100%;margin-left:auto;margin-right:auto;}
-@media screen and (min-width:1536px){
-    .container{max-width: 1536px;}
-}
-.button{padding:15px 20px;display:flex;align-items:center;justify-content:center;width:fit-content;background:$secondary;color:$white;grid-gap:14px;border:1px solid $secondary; border-radius:60px; font-style:normal; font-weight:500; font-size:16px; line-height:19px; position:relative; box-shadow:none; outline:none; z-index:1;transition:.5s all;
-    &:after{content:''; position:absolute; left:-6px; top:-6px; bottom:-6px; right:-6px; background:transparent; border-radius:60px; border:6px solid rgba($primary,.15); z-index:-1;}
-    &:before{content:'';background:url(/images/button-arrow.svg);width:30px;height:30px;transition:.5s all;}
-    &:hover{background-color:$primary;border-color:$primary;
-      &:before{transform:rotate(45deg);}
-    }
-}
+@use '../styles/style' as *;
 .main{background-color:$secondary;padding-top:120px;margin-top:50px;
     .toprow{display:grid;grid-template-columns:minmax(300px, 60%) minmax(300px, 40%);grid-gap:50px;
         .sidebar{display:grid;grid-gap:20px;
