@@ -61,7 +61,6 @@ export default function index() {
                 });
             }
         },[data]);
-        console.log(data)
     return (
         <>
             <Header />

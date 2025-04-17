@@ -1,0 +1,83 @@
+@use '../styles/style' as *;
+
+/* Counter */
+.counter{padding-top:60px;padding-bottom:60px;
+    .counterrow{padding:30px;border:1px solid $grey;border-radius:24px;display:grid;grid-template-columns:repeat(4, 1fr);text-align:center;}
+    .counterbox{
+        &:not(:last-child){border-right:1px solid $grey;}
+    }
+}
+
+@media screen and (max-width:1150px){
+    .counter{padding-top:30px;padding-bottom:30px;}
+}
+
+@media screen and (max-width:1050px){
+    .counter{
+        .counterrow{grid-template-columns:repeat(2, 1fr);row-gap:30px;}
+        .counterbox{
+            &:nth-child(2){border-right:none}
+        }
+    }
+}
+@media screen and (max-width:568px){
+    .counter{
+        .counterrow{padding:20px 0;}
+        .counterbox{padding:0 10px; display:grid;row-gap:10px;
+            p{font-size:14px;}
+        }
+    }
+}
+
+/* Why Choose Us */
+.main{padding-top:60px;padding-bottom:60px;
+    .maintitle{margin-bottom:100px;}
+    .row{display:grid;grid-gap:50px 80px;grid-template-columns:repeat(2, 1fr);align-items:center;
+        &:not(:last-child){margin-bottom:100px;}
+    }
+    .info{direction:ltr;grid-gap:20px;display:grid;
+        ul{padding-left:20px;
+            li{list-style-type:disc;}
+            li+li{margin-top:10px;}
+        }
+        img{height:auto;max-width:100%;display:block;margin:auto;}
+    }
+}
+@media screen and (min-width:1051px){
+    .main{
+        .row{
+            &:not(:last-child){margin-bottom:100px;}
+            &:nth-child(odd){grid-auto-flow:column;direction:rtl}
+        }
+        .info{direction:ltr;
+            > div{direction:ltr;}
+        }
+    }
+}
+@media screen and (max-width:1150px){
+    .main{padding-top:30px;padding-bottom:30px;
+        .maintitle{margin-bottom:80px;}
+    }
+}
+@media screen and (max-width:1050px){
+    .main{
+        .row{grid-gap:50px 80px;grid-template-columns:repeat(1, 1fr);
+            &:not(:last-child){margin-bottom:80px;}
+        }
+        .model{display:grid;grid-gap:30px;
+           
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .main{
+        .maintitle{margin-bottom:50px;}
+    }
+}
+@media screen and (max-width:600px){
+    .main{
+        .row{
+            &:not(:last-child){margin-bottom:50px;}
+        }
+    }
+}
