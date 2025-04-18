@@ -1,5 +1,3 @@
-import m from "gsap-trial/SplitText";
-
 export default function handler(req, res) {
     res.status(200).json({
         "banner": {
