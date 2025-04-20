@@ -1,12 +1,18 @@
 export default function handler(req, res) {
     res.status(200).json({
-        "banner": {
-            "title": "Working Method",
-            "subtitle": "It's undeniable that a hassle-free experience & systematic approach makes us feel like we're in right hands. Manthan Technologies takes care of this and assures that client is well-aware of the work progress & ongoing trends. With vast experience of service global clients for more than 7+ years, Manthan Technologies has now developed a process that ensures clients can get utmost satisfaction and relaxation while their project is in progress as well as after it's done.",
-            "button": {
-                "url": "#",
-                "title": "Get Started",
-                "target": ""
+        "seo":{
+            "title":"Working Method Manthan Technologies - Web Design & Development Company",
+            "discripion":"Whether you're embarking on a new Agile website or app development, an e-commerce site redesign, or maintenance, Manthan Technologies 7+ years of experience—ensures your online goals are met. Discover why Manthan Technologies is the best choice for your website, offering a 98% satisfaction rate.",
+            "keywords":"working method,Manthan Technologies working method,Manthan Technologies working steps",
+            "image": "/images/meta/working-method-meta-image.jpg"
+        },
+        "banner":{
+            "title":"Working Method",
+            "subtitle":"It's undeniable that a hassle-free experience & systematic approach makes us feel like we're in right hands. Manthan Technologies takes care of this and assures that client is well-aware of the work progress & ongoing trends. With vast experience of service global clients for more than 7+ years, Manthan Technologies has now developed a process that ensures clients can get utmost satisfaction and relaxation while their project is in progress as well as after it's done.",
+            "button":{
+                "url":"#",
+                "title":"Get Started",
+                "target":""
             },
             "image": {
                 "url": "/images/workingmethod-banner.svg",

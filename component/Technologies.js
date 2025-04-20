@@ -63,6 +63,7 @@ export default function Technologies() {
                                         alt={data?.image.alt}
                                         width={35}
                                         height={35}
+                                        priority={false}
                                     />
                                 </div>
                                 )}

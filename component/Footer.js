@@ -63,7 +63,7 @@ export default function Footer() {
                                     alt={data?.logo.alt}
                                     width={192}
                                     height={44}
-                                    priority='false'
+                                    priority={false}
                                 />
                                 <p>{data?.title}</p>
                             </div>

@@ -1,5 +1,12 @@
 export default function handler(req, res) {
     res.status(200).json({
+        "seo":{
+            "title":"Why Choose Us Manthan Technologies - Web Design & Development Company",
+            "discripion":"Whether you need a new website or app or e-commerce site, a redesign, or a maintenance service, Manthan Technologies can help you achieve your online goals. Discover why Manthan Technologies is the best choice for your website, with over 7+ years of experience and a 98% satisfaction rate.",
+            "keywords":"why choose us",
+            
+            "image": "/images/meta/why-choose-us-meta-image.jpg"
+        },
         "banner": {
             "title": "Why Choose Us",
             "subtitle": "Manthan Technologies delivers innovative solutions with a commitment to excellence. Our expert team ensures top-quality service, earning the trust of countless clients.",

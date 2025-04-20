@@ -16,7 +16,6 @@ export default function Industry() {
                 console.error("Error fetching Industries Module", error);
             }
         };
-        // fetchAPI();
         const timer = setTimeout(() => {
             fetchAPI();
           }, 1000);
@@ -68,7 +67,7 @@ export default function Industry() {
                                     alt={data?.image.alt}
                                     width={60}
                                     height={60}
-                                    priority='false'
+                                    priority={false}
                                 />
                             </div>
                             )}

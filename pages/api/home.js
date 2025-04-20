@@ -1,5 +1,11 @@
 export default function handler(req, res) {
     res.status(200).json({
+        "seo":{
+            "title":"Manthan Technologies - Web Design & Development Company",
+            "discription":"Manthantechnologies is one of India's leading Web Design & Development company, offering a wide range of custom web design solutions.",
+            "keywords":"web design, web development, UI/UX design, digital solutions, Redlio Designs, custom web design, responsive design, creative web development, IT company, branding, SEO optimization",
+            "image": "/images/meta/home-meta-image.jpg"
+        },
         "banner": {
             "title": "Top Rated Web Design & Development Company",
             "subtitle": "We craft high-performing websites and SaaS products by combining data-driven CRO, user research, and pixel-perfect design to deliver exceptional digital experiences.",

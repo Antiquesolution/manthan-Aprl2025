@@ -1,5 +1,11 @@
 export default function handler(req, res) {
     res.status(200).json({
+        "seo":{
+            "title":"Explore Our Business Models - Manthan Technologies",
+            "discripion":"Learn about our business models - Fixed cost, Hourly based, Dedicated in detail with their features. Elevate your success with innovative strategies and tailored solutions. Contact us today for a free quote.",
+            "keywords":"business models",
+            "image": "/images/meta/business-models-meta-image.jpg"
+        },
         "businessmodel":{
 			"maintitle": "Business Model",
             "title": "Engagement Model Differences",

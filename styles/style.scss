@@ -34,7 +34,7 @@ $shadow: 4px 6px 6px rgba($secondary, 0.05);
 }
 
 /* Main Title */
-.maintitle{margin-bottom:50px;
+.maintitle{margin-bottom:80px;
     .title{border:1px solid $darkgrey;border-radius:30px;color:$secondary;display: inline-block;font-size:18px;font-weight:400;margin-bottom:30px;padding:6px 16px;text-transform:capitalize;
         &::before{content:'';width:16px;height:16px;margin-right:10px;background-image:url(/images/top-title.svg);display:inline-block;background-repeat:no-repeat;background-size:cover;}
     }
@@ -43,7 +43,7 @@ $shadow: 4px 6px 6px rgba($secondary, 0.05);
 .centertitle{max-width:1200px;margin-left:auto;margin-right:auto;text-align:center;}
 
 @media screen and (max-width:1150px){
-    .maintitle{margin-bottom:30px;
+    .maintitle{margin-bottom:50px;
         .title{font-size:16px;}
     }
 }

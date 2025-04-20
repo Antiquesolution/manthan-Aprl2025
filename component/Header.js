@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '@/styles/header.module.scss'
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 export default function Header() {
@@ -8,6 +8,7 @@ export default function Header() {
     const [windowWidth, setWindowWidth] = useState(0);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [openSubMenuIndex, setOpenSubMenuIndex] = useState(null);
+    const headerRef = useRef(null);
     useEffect(() => {
         const fetchAPI = async () => {
             try {
@@ -30,6 +31,17 @@ export default function Header() {
             };
         }
     }, []);
+    useEffect(() => {
+        const updateHeaderHeight = () => {
+          if (headerRef.current) {
+            const height = headerRef.current.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', `${height}px`);
+          }
+        };
+        updateHeaderHeight();
+        window.addEventListener('resize', updateHeaderHeight);
+        return () => window.removeEventListener('resize', updateHeaderHeight);
+      }, [data]);
     const isUnwrapped = windowWidth > 1150;
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
@@ -39,13 +51,13 @@ export default function Header() {
     };
     return (
         <>
-            <header className={style.main}>
+            <header className={style.main} ref={headerRef}>
                 <div className={style.container}>
                     <div className={style.navbar}>
                         {data?.logo && (
                         <Link className={style.logo} href='/' target='_self'>
                             <Image
-                                style={{opacity:0}}
+                                // style={{opacity:0}}
                                 src={data?.logo.url}
                                 alt={data?.logo.alt}
                                 width={192}

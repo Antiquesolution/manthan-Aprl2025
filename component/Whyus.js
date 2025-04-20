@@ -40,7 +40,7 @@ export default function Whyus() {
                                         alt={data?.image.alt}
                                         width={40}
                                         height={40}
-                                        priority='false'
+                                        priority={false}
                                     />
                                 </div>
                                 )}
@@ -55,7 +55,7 @@ export default function Whyus() {
                                 alt={data?.whyus.image.alt}
                                 width={550}
                                 height={350}
-                                priority='false'
+                                priority={false}
                                 style={{'maxWidth':'100%', 'height':'auto', 'width':'auto', 'height':'auto'}}
                             />
                         </div>

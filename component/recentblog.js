@@ -121,7 +121,7 @@ export default function recentblog() {
                                                 alt='whyus'
                                                 width={1020}
                                                 height={500}
-                                                priority='false'
+                                                priority={false}
                                                 style={{'width':'auto', 'height':'auto', 'maxWidth': '100%'}}
                                             />
                                         </Link>
@@ -143,6 +143,7 @@ export default function recentblog() {
                                                     alt='auhor'
                                                     width={48}
                                                     height={48}
+                                                    priority={false}
                                                 />
                                             </div>
                                             <div className={style.blogauthordetails}>

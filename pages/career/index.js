@@ -1,59 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
-import style from '@/styles/workmethod.module.scss';
-import {useState, useEffect, useRef, useLayoutEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {useRouter} from "next/router";
+import style from '@/styles/career.module.scss';
 import Header from '@/component/Header';
 import Footer from '@/component/Footer';
-import Technologies from '@/component/Technologies';
-import Testimonials from '@/component/Testimonials';
+import Careerpost from '../career/Careerpost';
 import Recentblog from '@/component/recentblog';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 import Link from 'next/link';
 import Image from 'next/image';
-export default function page(){
+export default function index() {
     const [data, setAPIData] = useState(null);
-    const sectionRef = useRef(null);
-    const imagesRef = useRef([]);
     const router = useRouter();
     const baseUrl = typeof window !== "undefined" ? window.location.origin : '/';
     const currentUrl = `${baseUrl}${router.asPath}`;
     useEffect(() => {
         const fetchAPI = async () => {
             try {
-                const res = await fetch('/api/working-method');
-                const data = await res.json();  
+                const res = await fetch('/api/career');
+                const data = await res.json();
                 setAPIData(data);
             }catch (error){
-                console.error("Error fetching Business Model Module", error);
+                console.error("Error fetching Career Post Module", error);
             }
         };
         fetchAPI();
     }, []);
-    useLayoutEffect(() => {
-        if (!data?.workingmethod) return;
-        let ctx = gsap.context(() => {
-            imagesRef.current.forEach((image) => {
-                if (image) {
-                    gsap.set(image,{scale:0});
-                    gsap.to(image, {
-                        scale:1,
-                        duration:1.9,
-                        ease: 'power3.out',
-                        scrollTrigger: {
-                            trigger: image,
-                            start: 'top 90%',
-                            end: 'top 50%',
-                            once: true,
-                        },
-                    });
-                }
-            });
-        }); 
-        return () => ctx.revert();
-    }, [data]);
     const jsonLd = {
         "@context": "http://schema.org",
         "@type": "WebPage",
@@ -95,7 +67,7 @@ export default function page(){
                 <meta name="twitter:site" content="@Manthantechnologies" />
                 <meta name="twitter:creator" content="@Manthantechnologies" />                
                 <meta itemprop="twitter:image:src" content={data?.seo.image} />
-            
+                
                 <meta name="keywords" content={data?.seo.keywords} />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
@@ -144,7 +116,7 @@ export default function page(){
                                 alt={data?.banner.image.alt}
                                 width={600}
                                 height={400}
-                                priority='false'
+                                priority={true}
                             />
                         </div>
                         )}
@@ -152,44 +124,116 @@ export default function page(){
                 </div>
             </div>
             )}
-            {data?.workingmethod && (
             <div className={style.main}>
                 <div className={style.container}>
                     <div className={`${style.maintitle} ${style.centertitle}`}>
-                        <div className={style.title}>{data?.workingmethod.maintitle}</div>
-                        <h2>{data?.workingmethod.title}</h2>
-                        <p>{data?.workingmethod.subtitle}</p>
+                        <div className={style.title}>{data?.opening.maintitle}</div>
+                        <h2>{data?.opening.title}</h2>
+                        <p>{data?.opening.subtitle}</p>
                     </div>
-                    <div className={style.flow} ref={sectionRef}>
-                        {data?.workingmethod.workingmethodlist?.map((data, index) => (
-                        <div className={style.list} key={index}>
-                            <div className={style.steps}></div>
-                            <div className={style.row}>
-                                {data?.image && (
-                                <div className={style.image}>
-                                    <Image
-                                        ref={(el) => (imagesRef.current[index] = el)}
-                                        src={data?.image.url}
-                                        alt={data?.image.alt}
-                                        width={800}
-                                        height={792}
-                                        style={{"width":"auto", "height":"auto"}}
-                                    />
+                    <div className={style.row}>
+                        <Careerpost />
+                        <div className={style.openingsidebar}>
+                            <div className={style.sticky}>
+                                <div className={style.findopening}>
+                                    {data?.opening.image && (
+                                    <figure>
+                                        <Image 
+                                            src={data?.opening.image.url}
+                                            alt={data?.opening.image.alt}
+                                            width={68}
+                                            height={68}
+                                            priority={false}
+                                        />
+                                    </figure>
+                                    )}
+                                    <h3>{data?.opening.findtitle}</h3>
+                                    <Link
+                                        className={style.button}
+                                        href={data?.opening.button.url || '#'}
+                                        target={data?.opening.button.target || '_self'}
+                                    >
+                                        {data?.opening.button.title}
+                                    </Link>
                                 </div>
-                                )}
-                                <div className={style.content} dangerouslySetInnerHTML={{__html: data?.content}}></div>
+                                <div className={style.googlerating}>
+                                    {data?.opening.googleimage && (
+                                    <figure>
+                                        <Image 
+                                            src={data?.opening.googleimage.url}
+                                            alt={data?.opening.googleimage.alt}
+                                            width={203}
+                                            height={52}
+                                            priority={false}
+                                            style={{maxWidth:'100%', height:'auto'}}
+                                        />
+                                    </figure>
+                                    )}
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {data?.hiringprocess && (
+            <div className={style.hireprocess}>
+                <div className={style.container}>
+                    <div className={`${style.maintitle} ${style.centertitle}`}>
+                        <div className={style.title}>{data?.hiringprocess.maintitle}</div>
+                        <h2>{data?.hiringprocess.title}</h2>
+                    </div>
+                    <div className={style.row}>
+                        {data?.hiringprocess.processlist.map((data, index) => (
+                        <div className={style.processsteps} key={index}>
+                            <div className={style.processarrow}>
+                                <Image 
+                                    src='/images/process-arrow.svg'
+                                    alt='process-arrow'
+                                    width={68}
+                                    height={78}
+                                    priority={false}
+                                    style={{maxWidth:'100%', height:'auto'}}
+                                />
+                            </div>
+                            <h4>{data?.title}</h4>
                         </div>
                         ))}
                     </div>
                 </div>
             </div>
             )}
-            <Technologies />
-            <Testimonials />
+            {data?.benefits && (
+            <div className={style.perks}>
+                <div className={style.container}>
+                    <div className={style.row}>
+                        <div className={style.perksnfo}>
+                            <div className={style.maintitle}>
+                                <div className={style.title}>{data?.benefits.maintitle}</div>
+                                <h2>{data?.benefits.title}</h2>
+                                <p>{data?.benefits.subtitle}</p>
+                                <Link
+                                    className={style.button}
+                                    href={data?.benefits.button.url}
+                                    target={data?.benefits.button.target || '_self'}
+                                >
+                                    {data?.benefits.button.title}
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={style.perksnfo}>
+                            {data?.benefits.benefitsinfo.map((data, index) => (
+                            <div className={style.perkslist} key={index}>
+                                <h3>{data?.title}</h3>
+                                <p>{data?.subtitle}</p>
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            )}
             <Recentblog />
             <Footer />
         </>
-        
     )
 }

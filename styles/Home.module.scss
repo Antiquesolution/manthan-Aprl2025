@@ -50,9 +50,8 @@
 .services{padding-top:60px;padding-bottom:60px;
     .servicesrow{grid-template-columns:repeat(2, 1fr);grid-gap:0 50px;display:grid;}
     .button{margin-top:50px;}
-    .maintitle{position:sticky;top:130px;}
+    .maintitle{position:sticky;top:calc(var(--header-height) + 32px);}
     .servicesbox{padding:20px;display:flex;grid-gap:15px 30px;border:1px solid $grey;border-radius:10px;
-        
         &:not(:last-child){margin-bottom:15px;}
     }
     .servicesicon{width:60px;height:60px;background-color:$lightred;}
@@ -77,7 +76,7 @@
 .accordion{padding-top:60px;padding-bottom:60px;
 	.row{display:grid;grid-template-columns: minmax(300px, 35%) minmax(300px, 65%);grid-gap:0px 80px;}
 	.accordionsidebar{width:100%;
-		.maintitle{position:sticky;top:130px;}
+		.maintitle{position:sticky;top:calc(var(--header-height) + 32px);}
 	}
 	.accordionslist{width:100%;}
 	.accordionsitem{padding:20px;border-radius:16px;border:1px solid $grey;

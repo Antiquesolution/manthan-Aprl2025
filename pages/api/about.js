@@ -1,5 +1,11 @@
 export default function handler(req, res) {
     res.status(200).json({
+        "seo":{
+            "title":"About Manthan Technologies - Web Design & Development Company",
+            "discripion":"We are committed to delivering exceptional results to our clients and supporting them in reaching their business goals.",
+            "keywords":"about Manthan Technologies",
+            "image": "/images/meta/about-meta-image.jpg"
+        },
         "banner": {
             "title": "About Manthan Technologies",
             "subtitle": "Discover the power of creativity and technology with Manthan Technologies. We craft cutting-edge digital solutions that elevate your brand and drive success.",
