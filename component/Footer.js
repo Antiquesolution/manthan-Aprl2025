@@ -58,13 +58,18 @@ export default function Footer() {
                         <div className={style.row}>
                             {data?.logo && data?.title &&(
                             <div className={style.logobox}>
-                                <Image 
-                                    src={data?.logo.url}
-                                    alt={data?.logo.alt}
-                                    width={192}
-                                    height={44}
-                                    priority={false}
-                                />
+                                <Link
+                                    href='/'
+                                    target='_self'
+                                >
+                                    <Image 
+                                        src={data?.logo.url}
+                                        alt={data?.logo.alt}
+                                        width={192}
+                                        height={44}
+                                        priority={false}
+                                    />
+                                </Link>
                                 <p>{data?.title}</p>
                             </div>
                             )}
