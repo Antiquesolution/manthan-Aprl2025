@@ -10,8 +10,8 @@ export default function handler(req, res) {
             "title": "Join Our Team! Where Growth & Fun Awaits You!",
             "subtitle": "Manthantech Technologies creates a growth journey for you by providing a creative environment to express your ideas. Your career progression is in capable hands with opportunity for learning, getting mentored and receiving exposure to important aspects of your job roles. Join us to begin your journey of professional and personal growth today!",
             "image": {
-                 "url": "/images/aboutus-banner.svg",
-                "alt": "aboutus-banner"
+                 "url": "/images/career-banner.svg",
+                "alt": "career-banner"
             },
             "button": {
                 "url": "#openings",
@@ -133,6 +133,30 @@ export default function handler(req, res) {
             "position":"Hr Manager",
             "subtitle":"I've always worked on creating a positive and inclusive work-culture that values and appreciates every employee. I firmly believe that when HR prioritizes both employee comfort and company growth, it enables everyone to unleash their full potential, leading to sustainable and long-term success. Every member of our organization plays a significant role, and we consistently ensure that they feel recognized for their contributions.",
             "email":"hr@manthantech.in"
+        },
+        "bannerpost": {
+            "image": {
+                 "url": "/images/career-post-banner.svg",
+                "alt": "careerpost-banner"
+            }
+        },
+        "formbanner": {
+            "title": "Career And Culture",
+            "subtitle": "We're always excited to welcome good talent in the company. If you have great passion with exceptional skills & can't find your desired job position listed, knock the door. Apply now!",
+            "image": {
+                 "url": "/images/application-banner.svg",
+                "alt": "application-banner"
+            }
+        },
+        "formseo":{
+            "title":"Can't find opening? - Manthan Technologes",
+            "discripion":"Website Design,  Web Development, PSD to HTML, Responsive HTML5, Ecommerce Web Development, Mobile App Development, Hubspot Web Development, Wordpress Development, PHP Development, HTML Development, CMS Development",
+            "image": "/images/meta/career-meta-image.jpg"
+        },
+        "form":{
+            "maintitle":"Application",
+            "title":"Apply For Job",
+            "subtitle":"You are just a single step away from joining the best team to work with, look for a perfect opportunity with us and become a part of the Manthan Technologies family."
         }
-    });
+    }); 
 }

@@ -1,0 +1,16 @@
+@use '../styles/style' as *;
+
+.formmain{padding-top:60px;padding-bottom:60px;}
+.form{
+    .formgroup{grid-template-columns:1fr 1fr;display:grid;grid-gap:30px;padding-bottom:30px;}
+    .w100{grid-column:span 2;}
+    .formcontrol{
+        label{margin-bottom:15px;display:inline-block;font-size:16px;
+            span{color:$primary;}
+        }
+        input{width:100%;font-size:16px; padding:15px 20px;border:1px solid $grey;background:$light;
+            &::placeholder{font-size:16px;font-family:'Averta',serif;}
+            &:focus{outline:none;}
+        }
+    }
+}

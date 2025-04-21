@@ -135,9 +135,17 @@ export default function index() {
                                     Apply Now
                             </Link>
                         </div>
+                        {data?.bannerpost.image && (
                         <div className={style.bannerimage}>
-                            <Image alt="hero-banner" width="600" height="400" decoding="async" data-nimg="1" src="/images/hero-banner.svg" style={{ color: 'transparent' }} priority='false' />
+                            <Image 
+                                src={data?.bannerpost.image.url}
+                                alt={data?.bannerpost.image.alt}
+                                width={600}
+                                height={400}
+                                priority={true}
+                            />
                         </div>
+                        )}
                     </div>
                 </div>
             </div>

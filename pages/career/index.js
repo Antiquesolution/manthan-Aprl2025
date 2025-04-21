@@ -53,7 +53,7 @@ export default function index() {
     return(
         <>
             <Head>
-            <title>{data?.seo.title}</title>
+                <title>{data?.seo.title}</title>
                 <link rel="canonical" href={currentUrl} />
                 <meta name="description" content={data?.seo.discripion} />
                 

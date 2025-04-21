@@ -20,8 +20,8 @@ export default function handler(req, res) {
                                     "alt":"about-us"
                                 },
                                 "link":{
-                                    "url":"#",
-                                    "target":null,
+                                    "url":"/about-us",
+                                    "target":"_self",
                                     "title":"About Manthantech"
                                 }
                             }
@@ -29,8 +29,8 @@ export default function handler(req, res) {
                         {
                             "submenuitems":{
                                 "link":{
-                                    "url":"#",
-                                    "target":null,
+                                    "url":"/business-model",
+                                    "target":"_self",
                                     "title":"Business Model"
                                 }
                             }
@@ -38,8 +38,8 @@ export default function handler(req, res) {
                         {
                             "submenuitems":{
                                 "link":{
-                                    "url":"#",
-                                    "target":null,
+                                    "url":"/working-method",
+                                    "target":"_self",
                                     "title":"Working Method"
                                 }
                             }
@@ -47,8 +47,8 @@ export default function handler(req, res) {
                         {
                             "submenuitems":{
                                 "link":{
-                                    "url":"#",
-                                    "target":null,
+                                    "url":"/why-choose-us",
+                                    "target":"_self",
                                     "title":"Why Choose Us"
                                 }
                             }
@@ -65,8 +65,8 @@ export default function handler(req, res) {
                         {
                             "submenuitems":{
                                 "link":{
-                                    "url":"#",
-                                    "target":null,
+                                    "url":"/career",
+                                    "target":"_self",
                                     "title":"Careers"
                                 }
                             }
