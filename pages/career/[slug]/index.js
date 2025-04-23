@@ -129,7 +129,7 @@ export default function index() {
                             </ul>
                             <Link
                                 className={style.button}
-                                href='/'
+                                href='/career/application'
                                 target='_self'
                                 >
                                     Apply Now

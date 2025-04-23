@@ -106,24 +106,147 @@ export default function index() {
                                 <label>Apply For<span>*</span></label>
                                 <input 
                                     type='text'
+                                    name='applyfor'
                                     placeholder='Apply For'
                                 />
                             </div>
                             <div className={`${style.formcontrol}`}>
-                                <label>Apply For<span>*</span></label>
+                                <label>First Name<span>*</span></label>
                                 <input 
                                     type='text'
-                                    placeholder='Apply For'
+                                    name='firstname'
+                                    placeholder='First Name'
                                 />
                             </div>
                             <div className={`${style.formcontrol}`}>
-                                <label>Apply For<span>*</span></label>
+                                <label>Last Name<span>*</span></label>
                                 <input 
                                     type='text'
-                                    placeholder='Apply For'
+                                    name='lastname'
+                                    placeholder='Last Name'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Email Address<span>*</span></label>
+                                <input 
+                                    type='text'
+                                    name='email'
+                                    placeholder='Email Address'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Mobile Number<span>*</span></label>
+                                <input 
+                                    type='tel'
+                                    maxLength="15"
+                                    name='mobilenumber'
+                                    placeholder='Mobile Number'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Select Gender<span>*</span></label>
+                                <select>
+                                    <option value="Select Gender">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Qualification<span>*</span></label>
+                                <select>
+                                    <option value="Select Qualification">Select Qualification</option>
+                                    <option value="B.E Graduate">B.E Graduate</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="M.C.A">M.C.A</option>
+                                    <option value="B.A">B.A</option>
+                                    <option value="B.Com">B.Com</option>
+                                    <option value="B.Sc (IT)">B.Sc (IT)</option>
+                                    <option value="M.Sc (IT)">M.Sc (IT)</option>
+                                    <option value="Diploma">Diploma</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div className={`${style.formcontrol} ${style.w100}`}>
+                                <label>LinkedIn Profile<span>*</span></label>
+                                <input 
+                                    type='text'
+                                    name='linkedin-profile'
+                                    placeholder='Enter Your LinkedIn Profile URL'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Qualification<span>*</span></label>
+                                <select>
+                                    <option value="Experience">Experience</option>
+                                    <option value="Fresher">Fresher</option>
+                                    <option value="1+ Years">1+ Years</option>
+                                    <option value="2+ Years">2+ Years</option>
+                                    <option value="3+ Years">3+ Years</option>
+                                    <option value="4+ Years">4+ Years</option>
+                                    <option value="5+ Years">5+ Years</option>
+                                    <option value="6+ Years">6+ Years</option>
+                                    <option value="7+ Years">7+ Years</option>
+                                    <option value="8+ Years">8+ Years</option>
+                                    <option value="9+ Years">9+ Years</option>
+                                    <option value="10+ Years">10+ Years</option>
+                                </select>
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Notice Period<span>*</span></label>
+                                <input 
+                                    type='text'
+                                    name='notice-period'
+                                    placeholder='Notice Period'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Current CTC<span>*</span></label>
+                                <input 
+                                    type='text'
+                                    name='current-ctc'
+                                    placeholder='Enter Your Current CTC'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol}`}>
+                                <label>Expected CTC<span>*</span></label>
+                                <input 
+                                    type='text'
+                                    name='expected-ctc'
+                                    placeholder='Enter Your Expected CTC'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol} ${style.w100}`}>
+                                <label>Skill<span>*</span></label>
+                                <textarea 
+                                    type='te'
+                                    cols="40"
+                                    rows="5"
+                                    name='expected-ctc'
+                                    placeholder='Enter Your Skills'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol} ${style.w100}`}>
+                                <label>Personal Attributes<span>*</span></label>
+                                <textarea 
+                                    type='te'
+                                    cols="40"
+                                    rows="5"
+                                    name='personal-attribute'
+                                    placeholder='Enter Your Personal Attributes'
+                                />
+                            </div>
+                            <div className={`${style.formcontrol} ${style.w100}`}>
+                                <label>Message<span>*</span></label>
+                                <textarea 
+                                    type='te'
+                                    cols="40"
+                                    rows="5"
+                                    name='message'
+                                    placeholder='Enter Your Message to HR'
                                 />
                             </div>
                         </div>
+                        <button type='submit' className={style.button}>Apply Now</button>
                     </form>
                 </div>
             </div>

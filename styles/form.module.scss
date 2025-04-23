@@ -8,9 +8,24 @@
         label{margin-bottom:15px;display:inline-block;font-size:16px;
             span{color:$primary;}
         }
-        input{width:100%;font-size:16px; padding:15px 20px;border:1px solid $grey;background:$light;
+        input, select, textarea{width:100%;font-size:16px; padding:15px 20px;border:1px solid $grey;background:$light;border-radius:10px;color:$darkgrey;font-family:'Averta',serif;
             &::placeholder{font-size:16px;font-family:'Averta',serif;}
             &:focus{outline:none;}
+        }
+        select{appearance:none;background-image:url(/images/select.svg);background-repeat:no-repeat;background-position:96% 50%;background-size:15px;}
+    }
+}
+
+@media screen and (max-width:1250px){
+    .formmain{padding-top:30px;padding-bottom:30px;}
+}
+
+@media screen and (max-width:600px){
+    .form{
+        .formgroup{grid-template-columns:1fr;}
+        .w100{grid-column:inherit;}
+        .formcontrol{width:100%;
+            select{background-position:96% 50%;}
         }
     }
 }
