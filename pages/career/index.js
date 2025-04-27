@@ -99,15 +99,17 @@ export default function index() {
                 <div className={style.container}>
                     <div className={style.bannerrow}>
                         <div className={style.banneinfo}>
-                             <h1>{data?.banner.title}</h1>
-                             <p>{data?.banner.subtitle}</p>
-                             <Link
+                            <h1>{data?.banner.title}</h1>
+                            <p>{data?.banner.subtitle}</p>
+                            {data?.banner.button && (
+                            <Link
                                 className={style.button}
                                 href={data?.banner.button.url}
                                 target={data?.banner.button.target || '_self'}
-                             >
+                            >
                                 {data?.banner.button.title}
-                             </Link>
+                            </Link>
+                            )}
                         </div>
                         {data.banner.image && (
                         <div className={style.bannerimage}>
@@ -124,7 +126,7 @@ export default function index() {
                 </div>
             </div>
             )}
-            <div className={style.main}>
+            <div className={style.main} id='openings'>
                 <div className={style.container}>
                     <div className={`${style.maintitle} ${style.centertitle}`}>
                         <div className={style.title}>{data?.opening.maintitle}</div>

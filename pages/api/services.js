@@ -1,31 +1,50 @@
 const posts = [
     {
-        "slug":"php-team-lead",
-        "title":"PHP Team Lead",
-        "subtitle":"If you think you can do team management & you have good knowledge of PHP, apply now.",
-        "experience":"4+ Years",
-        "jobtype":"Full Time",
-        "location":"ahmedabad",
-        "openings":"1",
-        "jobdiscription":{
-            "title":"Job Description",
-            "subtitle":"The role includes overseeing and guiding a team of PHP developers in the development and maintenance of PHP-based web applications and systems. This role combines technical expertise in PHP programming with leadership and project management skills."
+        "slug":"web-app-development",
+        "title":"Web Application Development",
+        "subtitle":"At Manthan Technologies, we specialize in providing custom web app development services tailored to meet the unique needs of each client. Our team is proficient in a wide range of technologies, including HTML5, CSS3, JavaScript, jQuery, React, Less/Sass, and more. We offer a comprehensive suite of services to build featured-rich secure web applications and Software development.",
+        "whychoose":{
+            "maintitle":"Why Choose",
+            "title":"Why Choose Manthan Technologies for Web App Development Services?",
+            "subtitle":"Manthan Technologies excels in designing tailored web app development solutions. With track records of web application services, thousands of businesses for various industries count on us.",
+            "whychooselist":"<li>7+ Years of Experience in Various Web App Development</li><li>35+ Completed Web App Development Projects</li><li>Prioritize Usability and Intuitive Interfaces For User-Centric Design</li><li>Understanding Client Requirements Thoroughly</li><li>Agile Team With Weekly Sprint Progress Updates</li><li>Seamlessly Integrate With Other Systems Or Apis As Needed</li><li>Prioritizing Security, Quality Assurance, and Speed Optimization</li><li>Build Web Apps That Can Accommodate Future Growth and Expansion</li><li>Providing Documentation For Easy Maintenance and Updates</li>"
         },
-        "qualifications":{
-            "title":"Minimum Qualifications",
-            "subtitle":"B.E/B.Tech/M.E/M.Tech in CS or IT/ BCA/ MCA"
+        "keytakeaway":{
+            "title":"Key take away from Manthan Technologies",
+            "subtitle":"<li>Industry Expertise</li><li>Quality Assurance</li><li>Competitive Pricing</li><li>On-time Delivery</li><li>Strict NDA Policy</li><li>No Hidden Costs</li><li>Quick Support</li>"
         },
-        "roles_responsibilities":[
-            {
-                "content":"<ul><li>Preferred candidate should be confident and should have willingness to undertake multiple challenges and should have strong desire to emerge as winner in handling crucial situations.</li><li>Should be capable of handling multiple projects.</li><li>Should have a good knowledge and experience of Ajax, jQuery, WordPress, Core PHP, Laravel, Shopify etc.</li><li>Should be efficient enough to utilize the resources available to him.</li><li>Analyze client requirements and prepare scope of work and time frame accordingly.</li><li>Can handle and plan project milestones and deadlines.</li><li>Should be able to interact with client during entire project development life cycle.</li></ul>"
-            },
-            {
-                "content":"<ul><li>Should have an excellent communication and leadership skills.</li><li>Should have good analytical and problem solving skills.</li><li>Knowledge of open source ecommerce softwares.</li><li>Ability to motivate staff in a team- oriented, collaborative environment.</li><li>Should eager to learn new things and take up challenges.</li><li>Self Learn and career oriented.</li><li>Enthusiastic, energetic, detail oriented, and self-Motivated.</li><li>Should be able to interact with client during entire project development life cycle and able to manage project delivery on time.</li><li>Should be able to Improve the technical competence of the team through training development of existing and new team members.</li><li>Must be productive, self-disciplined, and capable of managing team productivity and result-oriented work quality.</li></ul>"
-            }
-        ]
+        "services":{
+            "maintitle":"Services",
+            "title":"Why Choose Manthan Technologies for Web App Development Services?",
+            "subtitle":"Manthan Technologies excels in designing tailored web app development solutions. With track records of web application services, thousands of businesses for various industries count on us.",
+            "list":[
+                {
+                    "title":"Custom Web Development Services",
+                    "subtitle":"Our team employs the best web development practices and user experience (UX) principles to ensure your application is highly engaging, intuitive, and provides seamless experiences. We are dedicated to staying updated on emerging technologies and creating interactive apps through our comprehensive services."
+                },
+                {
+                    "title":"E-commerce Web Development",
+                    "subtitle":"Our E-commerce experts are dedicated to helping you launch and manage a thriving online store. We know the value of an efficient, user-friendly E-commerce website in reinforcing your brand and expanding your sales potential."
+                },
+                {
+                    "title":"Custom Web Design & Development",
+                    "subtitle":"Our custom web design and development services empower businesses to create a distinctive website that embodies their brand and achieves their goals. Our team excels in developing portals with bespoke features, interactive elements, responsive layouts, and integrated data sets."
+                },
+                {
+                    "title":"Custom Web App Development",
+                    "subtitle":"Our development team possesses the expertise to craft custom web app solutions, ensuring seamless performance across all devices, from desktops to smartphones. We have successfully developed Single-Page Applications (SPAs), Progressive Web Apps (PWAs), and cross-platform experiences."
+                },
+                {
+                    "title":"Backend Development",
+                    "subtitle":"At Manthantech, we excel in backend development, database management, and API design. Leveraging cutting-edge technologies and our seasoned expertise in back-end programming, rest assured that your website will operate seamlessly, providing your visitors with an exceptional experience."
+                },
+                {
+                    "title":"Website Maintenance & Support",
+                    "subtitle":"Alongside our custom development solutions, we specialize in website upgrades and maintenance services. Whether you're seeking to enhance your website's functionality or improve its performance and security, we've got you covered. From bug fixes and updates to performance optimization and security enhancements, we provide comprehensive assistance to help you get the most out of your website."
+                }
+            ]
+        }
     }
-    
-    
 ];
 
 export default function handler(req, res) {

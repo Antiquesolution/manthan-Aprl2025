@@ -12,12 +12,12 @@ export default function handler(req, res) {
             "image": {
                  "url": "/images/career-banner.svg",
                 "alt": "career-banner"
-            },
-            "button": {
-                "url": "#openings",
-                "target": "_self",
-                "title": "View All Openings"
             }
+            // "button": {
+            //     "url": "#openings",
+            //     "target": "_self",
+            //     "title": "View All Openings"
+            // }
         },
         "opening":{
             "maintitle":"Make Your Mark",
@@ -29,7 +29,7 @@ export default function handler(req, res) {
             },
             "findtitle":"Can't find opening?",
             "button":{
-                "url":"/",
+                "url":"/career/application",
                 "title":"Click Here",
                 "target":"_self",
             },
