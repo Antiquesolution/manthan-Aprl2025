@@ -59,7 +59,6 @@ export default function index() {
             setStatus('Something went wrong.');
         }
     };
-    console.log(data)
     return (
         <>
             <Header />

@@ -23,21 +23,29 @@ export default function index() {
         };
         fetchAPI();
     }, []);
-    const [formData, setFormData] = useState({applyfor:'',firstname:'',lastname:'',email:'',mobilenumber:'',gender:'',qualification:'',linkedinProfile:'',experience:'',noticePeriod:'',currentCtc:'',expectedCtc:'',skill:'',personalAttribute:'',message:'',resume:null,});
+    
+
+
+    const [formData, setFormData] = useState({applyfor:'',firstname:'',lastname:'',email:'',mobilenumber:'',gender:'',qualification:'',linkedinProfile:'',experience:'',noticePeriod:'',currentCtc:'',expectedCtc:'',skill:'',personalAttribute:'',message:'',resume:''});
     const [status, setStatus] = useState('');
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-        const { name, value, type, files } = e.target;
-        if (type === 'file') {
-            setFormData({ ...formData, [name]: files[0] });
+    // const handleChange = (e) => {
+    //     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // };
+
+    const handleChange = async (e) => {
+        const { name, value, files } = e.target;
+        if (name === "resume" && files.length > 0) {
+            const file = files[0];
+            const base64 = await toBase64(file);
+            setFormData((prev) => ({ ...prev, resume: base64, resumeName: file.name }));
         } else {
-            setFormData({ ...formData, [name]: value });
+            setFormData((prev) => ({ ...prev, [name]: value }));
         }
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('/api/career-form', {
+            const res = await fetch('/api/career-email', {
                 method:'POST',
                 headers:{'Content-Type': 'application/json'},
                 body:JSON.stringify(formData),
@@ -45,8 +53,7 @@ export default function index() {
             if (res.ok) {
                 // setStatus('Email sent successfully!');
                 window.location.href = '/thank-you';
-                setFormData({applyfor:'',firstname:'',lastname:'',email:'',mobilenumber:'',gender:'',qualification:'',linkedinProfile:'',experience:'',noticePeriod:'',currentCtc:'',
-                expectedCtc:'',skill:'',personalAttribute:'',message:'',resume:null,});
+                setFormData({applyfor:'',firstname:'',lastname:'',email:'',mobilenumber:'',gender:'',qualification:'',linkedinProfile:'',experience:'',noticePeriod:'',currentCtc:'',expectedCtc:'',skill:'',personalAttribute:'',message:'',resume:''});
             } else {
                 setStatus('Failed to send email.');
             }
@@ -55,8 +62,12 @@ export default function index() {
             setStatus('Something went wrong.');
         }
     };
-
-
+    const toBase64 = (file) => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = (error) => reject(error);
+    });
 
     const jsonLd = {
         "@context":"https://schema.org",
